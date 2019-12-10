@@ -2,7 +2,7 @@ class Api::V1::ReviewsController < ApplicationController
     before_action :set_book
 
     def index
-        @reviews = @book.reviews
+        @reviews = Review.all
         render json: @reviews
     end
 
@@ -20,7 +20,7 @@ class Api::V1::ReviewsController < ApplicationController
 end
 
     def show
-        @review = Review.find(params[:id])
+        @review = Review.find(id: params[:id])
         render json: @review
     end
 
