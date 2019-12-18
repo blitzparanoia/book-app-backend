@@ -13,7 +13,7 @@ class Api::V1::ReviewsController < ApplicationController
     def create
         @review = @book.reviews.build
         if @review.update(review_params)
-            render json: @review
+            render json: @book
         else
             render json: {error: 'Error creating review'}
     end
