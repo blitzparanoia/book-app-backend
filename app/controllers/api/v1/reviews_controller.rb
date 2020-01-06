@@ -25,9 +25,9 @@ end
     end
 
     def destroy
-        review = Review.find(params["id"])
-        book = Book.find(review.book_id)
-        review.destroy
+        @review = Review.find(params["id"])
+        @book = Book.find(@review.book_id)
+        @review.destroy
         render json: @book
         
     end

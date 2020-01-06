@@ -19,6 +19,13 @@ class Api::V1::BooksController < ApplicationController
         render json: @book
     end
 
+    def update
+      @book = Book.find(params[:id])
+      @book.update(title: params["book"]["title"], author: params["book"]["author"], description: params["book"]["description"])
+      @book.save
+      render json: @book
+    end
+
     def destroy
         @book = Book.find(params[:id])
         @book.destroy
