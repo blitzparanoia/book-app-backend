@@ -3,7 +3,7 @@
 A Rails/React app that allows the user to keep track of books read. The user can also create a review for the books.
 
 ### Installation
-1. Fork and clone `book-app-frontend` & `book-app-backend`
+1. Fork and clone ([book-app-backend](https://github.com/blitzparanoia/book-app-backend)) & ([book-app-frontend](https://github.com/blitzparanoia/book-app-frontend))
 2. `cd` into the app directory for `book-app-frontend`
 3. Type `bundle install` to install dependencies
 4. Create the database by typing   `rails db:migrate`
